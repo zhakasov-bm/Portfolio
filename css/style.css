@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  z-index: 999;
+  padding: 15px 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.header.sticky{
+  background: crimson;
+}
+
+.header .logo{
+  margin: 0 540px 0 50px;
+}
+
+.header .logo a{
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.header .logo a:hover{
+  color: crimson;
+}
+
+.header.sticky .logo a:hover{
+  color: black
+}
+
+.header ul{
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.header ul li a{
+  margin-left: 50px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header ul li a:hover{
+  color: crimson;
+}
+
+.header ul li a.active{
+  color: black;
+}
+
+.header.sticky ul li a:hover{
+  color: black;
+}
+
+.menu-btn{
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  margin-left: 300px;
+}
+
+/*Start Home Section*/
+
+.home{
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  padding: 200px 0 0px 50px;
+}
+
+.home .text-1{
+  font-size: 27px;
+  opacity: 0;
+}
+.home .text-2{
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+  opacity: 0;
+}
+.home .text-3{
+  font-size: 40px;
+  margin: 5px 0;
+  opacity: 0;
+}
+.home .text-3 span{
+  color: crimson;
+  font-weight: 500;
+}
+
+.home .scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2px solid crimson;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.scroll-down::before,
+.scroll-down::after{
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid crimson;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after{
+  top: 30%;
+  animation-delay: .3s;
+}
+
+@keyframes scroll-down{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    top: 90%;
+  }
+}
+/*End Home Section*/
+
+/*Start About Section*/
+.about .about-content{
+  height: 100%;
+  padding-top: 80px;
+}
+
+.about .about-content .heading{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+}
+.about .heading-underline {
+  width: 5rem;
+  height: .2rem;
+  background-color: crimson;
+  margin: 0 auto 2rem;
+}
+
+.about .img img{
+  border: 2px solid crimson;
+  border-radius: 3%;
+}
+
+.about .info p{
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.about .info .tab table{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.about .info .tab table tr th{
+  padding: 0 20px 20px 0;
+}
+
+.about .info .tab table tr .ans{
+  color: crimson;
+}
+
+.about .sci a{
+  font-size: 30px;
+  padding:  0 20px 0 0;
+  color: black;
+}
+
+.about .sci a:hover{
+  color: crimson;
+}
+/*End About Section*/
+
+/*Start Skills Section*/
+.skills .skills-content{
+  height: 100%;
+  padding: 100px 0;
+  margin-top: 50px;
+  background-color: black;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.skills .skills-content .heading{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+}
+.skills .heading-underline {
+  width: 5rem;
+  height: .2rem;
+  background-color: crimson;
+  margin: 0 auto 2rem;
+}
+
+.skills .skills-content p{
+  font-size: 30px;
+  font-weight: 500;
+  color: crimson;
+}
+
+.skills .skills-content .read{
+  margin-top: 10px;
+}
+
+.skills .skills-content button{
+  text-decoration: none;
+  border-color: crimson;
+  background-color: crimson;
+  transition: 0.3s;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.skills .skills-content button:hover{
+  background-color: transparent;
+  color: crimson;
+}
+
+.skills .skills-content .info{
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-content .line{
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.skills .skills-content .line::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  left: 0;
+  top: 0;
+  background: crimson;
+}
+
+.skills .skills-content .css::before{
+  width: 80%;
+}
+.skills .skills-content .javascript::before{
+  width: 65%;
+}
+.skills .skills-content .java::before{
+  width: 75%;
+}
+.skills .skills-content .sql::before{
+  width: 50%;
+}
+/*End Skills Section*/
+
+/*Start Hobby Section*/
+.hobby .hobby-content {
+  height: 100%;
+  padding: 80px 0;
+}
+
+.hobby .hobby-content .heading{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  color: black;
+}
+.hobby .heading-underline {
+  width: 5rem;
+  height: .2rem;
+  background-color: crimson;
+  margin: 0 auto 2rem;
+}
+
+.hobby .hobby-content .items img{
+  position:absolute;
+  border-radius: 4%;
+  left: 0px;
+  top: 0px;
+  padding-left: 5px;
+}
+
+.hobby .hobby-content .items h3{
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 50px;
+}
+
+.hobby .hobby-content .items #ft{
+  padding-top: 100px;
+}
+
+.hobby .hobby-content .items img:hover{
+  opacity: 0.3;
+}
+
+.hobby .hobby-content .items video{
+  position:absolute;
+  border-radius: 5%;
+  left: 0px;
+  top: 0px;
+}
+
+.hobby .hobby-content .items video:hover{
+  opacity: 0.3;
+}
+
+/*End Hobby Section*/
+
+/*Start Contact Section*/
+.contact .contact-content{
+  height: 100%;
+  padding: 100px 0;
+  margin-top: 50px;
+  background-color: #ECEDEF;
+}
+
+.contact .contact-content .heading{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  color: black;
+}
+
+.contact .heading-underline {
+  width: 5rem;
+  height: .2rem;
+  background-color: crimson;
+  margin: 0 auto 2rem;
+}
+
+.contact .contact-content .main{
+  height: 350px;
+  background-color: black;
+  padding: 30px;
+  border-radius: 5%;
+}
+
+.contact .contact-content .main h3{
+  padding-bottom: 10px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .contact-content .main input{
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .main button{
+  border-color: crimson;
+  background-color: crimson;
+  transition: 0.3s;  
+}
+
+.contact .contact-content .main .btn{
+  display: block;
+  text-align: left;
+  padding: 0;
+}
+
+.contact .contact-content .main button a{
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+.contact .contact-content .main button:hover{
+  background-color: transparent;
+}
+
+.contact .contact-content .main button a:hover{
+  color: crimson;
+}
+
+.contact .contact-content .back{
+  height: 350px;
+  padding: 30px;
+  background-color: crimson;
+  border-radius: 5%;
+}
+
+.contact .contact-content .back h3{
+  padding-bottom: 10px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .contact-content .back p{
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .contact-content .back .icons{
+  margin: 0 15px;
+}
+
+.contact .contact-content .back .icons img{
+  margin-bottom: 25px;
+}
+
+.contact .contact-content .back .icons .info{
+  margin-top: -5px;
+  margin-left: 35px;
+}
+
+.contact .contact-content .back .icons .info .head{
+  margin-bottom: -5px;
+  font-weight: 900;
+  font-family: 'Ubuntu', sans-serif;
+}
+.contact .contact-content .back .sub-title{
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+}
+
+/*End Contact Section*/
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 50px 0;
+  margin-top: 0;
+  letter-spacing: 5px;
+}
+
+footer .sci{
+  margin-top: 30px;
+}
+
+footer .sci a{
+  font-size: 30px;
+  padding-left: 15px;
+  color: white;
+}
+
+footer .sci a:hover{
+  color: crimson;
+}
+
+footer .row strong{
+  font-family: sans-serif;
+  margin: -10px 0 0 -70px;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  font-weight: lighter;
+  background: linear-gradient(90deg, black, white, black);
+  animation: animate 3s linear infinite;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate{
+  from{
+    background-position: -1000%;
+  }
+  to{
+    background-position: 1000%;
+  }
+}
+
+.socket {
+  margin-top: 30px;
+  padding-top: 15px;
+  width: 100%;
+  border-top: 2px solid #ECEDEF;
+}
+
+/*Responsive Media*/
+@media (max-width: 800px){
+  .header .logo{
+    margin: 0 80px 0 20px;
+  }
+
+  .menu-btn{
+    display: block;
+    z-index: 999;
+  }
+
+  .header .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: black;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .header .menu.active-btn{
+    left: 0;
+  }
+
+  .header.sticky ul li a:hover{
+    color: crimson;
+  }
+
+  .header .menu li a.active{
+    color: crimson;
+  }
+
+  .header .menu{
+    display: block;
+  }
+
+  .header .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .home .main{
+    margin-top: -70px;
+  }
+
+  .home .scroll-down{
+    left: 45%;
+  }
+
+  .skills p{
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .skills button{
+    margin: 20px 0;
+  }
+
+  .hobby img{
+    height: 300px;
+  }
+  .hobby .row{
+    margin-bottom: 200px;
+  }
+
+  .hobby .mobile{
+    margin-bottom: 200px;
+  }
+
+  .hobby .hobby-content .items h3{
+    padding-top: 120px;
+    font-size: 50px;
+  }
+
+  .contact .contact-content .main {
+    height: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+}
